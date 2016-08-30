@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.sectionButton').on('click', function(e) {
+                var $button = $(e.target);
+                var $section = $('#' + $button.data('id'));
+                $('#selected-section').html($section.html());
+            });
+            $('#selected-section').css('top', $('#top-nav').position().top+$('#top-nav')[0].clientHeight);
+            $('#selected-section').html($('#intro').html());
+        });
+    </script>
+    <style>
+        body {
+            background-color:blanchedalmond;
+        }
+        .pinnedToTop {
+            position: absolute;
+            top:100px;
+            left:0px;
+            width:100%;
+            height:auto;
+            background-color:cadetblue;
+            display: table;
+            table-layout: fixed;
+        }
+        .sectionButton {
+            height:25px;
+            border: 1px solid #ffffff;
+            color:#ffffff;
+            display: table-cell;
+            text-align:center;
+        }
+        #selected-section {
+            position:absolute;
+            background-color:lightgrey;
+            width:100%;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center;">Kristen Brann</h1>
+<div class="pinnedToTop" id="top-nav">
+    <div class="sectionButton" data-id="intro">Intro</div>
+    <div class="sectionButton" data-id="experience">Experience</div>
+    <div class="sectionButton"data-id="travel">Travel</div>
+    <div class="sectionButton" data-id="food">Food</div>
+    <div class="sectionButton" data-id="ruby">Ruby</div>
+</div>
+<span id="selected-section"></span>
+<span id="intro" style="display:none;">
+    Hello, world! I couldn't resist.
+</span>
+<span id="experience" style="display:none;">
+    <ul>
+        <li>Highschool in Maine</li>
+        <li>First Robotics</li>
+        <li>WPI</li>
+        <li>Venice, NVIDIA</li>
+        <li>PegaSystems</li>
+        <li>Constant Contact</li>
+    </ul>
+</span>
+<span id="travel" style="display:none;">
+    I have gone a few places, I'd like to go more!
+</span>
+<span id="food" style="display:none;">
+    I LOVE FOOD!
+</span>
+<span id="ruby" style="display:none;">DOGS!</span>
+</body>
+</html>
