@@ -1,1 +1,176 @@
-Hello, world!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="A website all about Kristen Brann">
+    <meta name="author" content="Kristen Brann">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Kristen Brann</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="main-styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://use.fontawesome.com/bd5d4c052d.js"></script>
+    <script type="text/javascript">
+        var active_tab = 'home';
+        function activate(id) {
+            if (id === active_tab) {
+                return;
+            }
+            $('#' + id).removeClass('inactive').addClass('active');
+            $('#' + active_tab).removeClass('active').addClass('inactive');
+            active_tab = id;
+        }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Kristen Brann</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#" onClick="activate('home')">Home</a></li>
+                  <li><a href="#" onClick="activate('experience')">Experience</a></li>
+                  <li><a href="#" onClick="activate('hobbies')">Hobbies</a></li>
+                  <li><a href="#" onClick="activate('contact')">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover tab-content bg-transparent-black active" id="home">
+            <h1 class="cover-heading">Hello, world!</h1>
+            <p class="lead">
+                My name is Kristen. I am currently working as a Software Engineer at Constant Contact.
+                This website was created for fun using Bootstrap, because I wanted to try out the popular framework.
+            </p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default" onClick="activate('contact')">Contact Me</a>
+            </p>
+          </div>
+
+          <div id="experience" class="tab-content inactive">
+
+              <div class="timeline">
+                  <div class="row">
+                      <div>
+                          <div class="col-md-2 timeline-entry-time">July 2015 - present</div>
+                          <div class="col-md-10 bg-transparent-black">
+                              <h4>Software Engineer at Constant Contact</h4>
+                              I joined Constant Contact as a member of their Software Engineering Development Program. During the program,
+                              I rotated through engineering teams gaining experience with a variety of technologies.
+                              After completing the 1 year program I moved to a full time team working on full stack web applications using Java, JavaScript, and AngularJS.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div>
+                          <div class="col-md-2 timeline-entry-time">Jan 2015 - March 2015</div>
+                          <div class="col-md-10 bg-transparent-black">
+                              <h4>Contractor at NVIDIA</h4>
+                              I worked with NVIDIA through a project program at WPI. I got to live in Mountain View, CA and commute daily to NVIDIA's Santa Clara office.
+                              While at NVIDIA, I worked Worked on a one-way Bug Synchronization between a partner company's bug database and the NVIDIA bug database.
+                              This decreased the delay in updates being synced to the NVIDIA database from ~1 day to 10 minutes.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div>
+                          <div class="col-md-2 timeline-entry-time">May 2013 - Nov 2014</div>
+                          <div class="col-md-10 bg-transparent-black">
+                              <h4>Intern and Contractor at Pegasystems</h4>
+                              I started working as an intern at Pegasystems with the Flying Toasters team. Most of my time was spent working with Java, Javascript,
+                              and the Pega Rules Process Commander to maintain and enhance their application. After my summer internship, I continued on with the same
+                              team as a Software Engineering contractor.
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div id="hobbies" class="tab-content inactive">
+            <div class="row">
+              <div class="col-md-4 bg-transparent-black">
+                  <h4>Cooking</h4>
+                  <p>
+                      I love to cook! I especially love to eat. Anything that I eat or serve for a meal has to be delicious.
+                      I often experiment with ideas I come up with on my own or ones I find online through social media and food blogs.
+                      My favorite baking blog is Sally's Baking Addiction. I would highly recommend her recipe for
+                      <a href="http://sallysbakingaddiction.com/2013/05/13/chewy-chocolate-chunk-cookies/">Chocolate Chip Cookies</a>.
+                  </p>
+              </div>
+              <div class="col-md-4 bg-transparent-black">
+                  <h4>Hiking</h4>
+                  <p>
+                      I have always enjoyed day-hikes. It's great exercise and I love the fresh air. Originally from Maine, it is a must
+                      that I get out of the city regularly to spend some time with nature. The background photo on this website is actually from
+                      when I hiked Mt. Washington! That was definitely the hardest hike I have done so far. As I build up equipment, I look forward
+                      to getting into some multi-day hikes.
+                </p>
+              </div>
+              <div class="col-md-4 bg-transparent-black">
+                  <h4>Ruby</h4>
+                  <p>
+                      Despite what you may be thinking, I am not referring to the language Ruby. Ruby is the name of my labradoodle. I adore
+                      her and shamelessly post photos to her <a href="instagram.com/ruby.doodle/">personal dog Instagram</a>. She is a great co-pilot and adventurer side kick. I bring
+                      her hiking, camping, to the beach, to restaurants, to parties, basically anywhere that allows dogs to join in on the fun.
+                  </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="contact" class="tab-content bg-transparent-black  inactive">
+              <h1>I'd love to hear from you!</h1><br>
+              <h4>
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="www.linkedin.com/in/kristenbrann">www.linkedin.com/in/kristenbrann</a>
+              </h4>
+              <h4>
+                  <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:tellkristenstuff@gmail.com">tellkristenstuff@gmail.com</a>
+              </h4>
+          </div>
+
+          <div class="mastfoot">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
